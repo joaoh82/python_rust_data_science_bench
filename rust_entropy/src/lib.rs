@@ -17,7 +17,7 @@ py_module_initializer!(
     }
 );
 
-/// Compute entropy on byte array
+/// Compute entropy on byte array (Pure Rust)
 fn compute_entropy_pure_rust(data: &[u8]) -> f64 {
     let mut counts = [0; 256];
     let mut entropy = 0_f64;
