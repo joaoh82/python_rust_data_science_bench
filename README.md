@@ -1,5 +1,6 @@
 Rust and Python - Data Science Benchmark
 ===
+Testing the performance of Rust and Python on a simple data science task.
 
 Tools and Requirements:
 * https://github.com/dgrunwald/rust-cpython
