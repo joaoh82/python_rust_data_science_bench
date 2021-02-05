@@ -5,8 +5,10 @@ numpy==1.20.0
 packaging==20.9
 pluggy==0.13.1
 py==1.10.0
+py-cpuinfo==7.0.0
 pyparsing==2.4.7
 pytest==6.2.2
+pytest-benchmark==3.2.3
 rust-entropy==1.0
 scipy==1.6.0
 semantic-version==2.8.5
