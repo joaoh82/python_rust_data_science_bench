@@ -7,33 +7,43 @@ Tools and Requirements:
 * https://github.com/PyO3/setuptools-rust
 * https://docs.rs/crate/pyo3/0.13.1
 * brew install gnu-time
+* virtualenv
+* Python 3.7.4
+
 
 Importante Sources:
 * https://gist.github.com/ssokolow/34ce62a0d98054810c488a7f0d3fd4e0
-* https://www.crowdstrike.com/blog/data-science-test-drive-of-rust-programming-language/
 
+
+Running the tests:
+```
+$ virtualenv env
+$ source venv/bin/activate
+$ pip install
+```
 
 Results:
 
 ```
 # Python invoking pure Rust
-$ gtime python benchmark.py
+$ gtime python entropy_rust.py
 3.00user 0.61system 0:02.01elapsed 180%CPU (0avgtext+0avgdata 60240maxresident)k
 0inputs+0outputs (5major+15215minor)pagefaults 0swaps
 
 # Python with Data Science Libraries
-$ gtime python benchmark.py
+$ gtime python entropy_python_data_science.py
 5.85user 1.28system 0:05.84elapsed 122%CPU (0avgtext+0avgdata 151744maxresident)k
 0inputs+0outputs (2133major+35969minor)pagefaults 0swaps
 
 # Pure Python
-$ gtime python benchmark.py
+$ gtime python entropy_pure_python.py
 83.88user 0.95system 1:23.82elapsed 101%CPU (0avgtext+0avgdata 60004maxresident)k
 0inputs+0outputs (2129major+13035minor)pagefaults 0swaps
 ```
 
 Benchmark Tests:
 ```
+$ pytest entropy.py
 --------------------------------------------------------------------------------------------------- benchmark: 3 tests ---------------------------------------------------------------------------------------------------
 Name (time in us)                    Min                     Max                    Mean                StdDev                  Median                   IQR            Outliers         OPS            Rounds  Iterations
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
