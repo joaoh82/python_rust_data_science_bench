@@ -4,7 +4,7 @@ from scipy.stats import entropy as scipy_entropy
 import rust_entropy_lib
 
 def compute_entropy_pure_python(data):
-    """Compute entropy on bytearray `data`."""
+    """Compute entropy on byte array `data`."""
     counts = [0] * 256
     entropy = 0.0
     length = len(data)
@@ -20,12 +20,12 @@ def compute_entropy_pure_python(data):
     return entropy
 
 def compute_entropy_scipy_numpy(data):
-    """Compute entropy on bytearray `data` with SciPy and NumPy."""
+    """Compute entropy on byte array `data` with SciPy and NumPy."""
     counts = np.bincount(bytearray(data), minlength=256)
     return scipy_entropy(counts, base=2)
 
 def compute_entropy_rust_from_python(data):
-    """Compute entropy on bytearray `data` with Rust."""
+    """Compute entropy on byte array `data` with Rust."""
     return rust_entropy_lib.compute_entropy_cpython(data)
 
 # ### BENCHMARKS ###
