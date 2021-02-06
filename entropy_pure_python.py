@@ -6,6 +6,6 @@ import entropy
 with open('test.img', 'rb') as f:
     DATA = f.read()
 
-# Here we just repeat the calculations 100 times, for whatever method we choose
+# Here we just repeat the calculations 100 times, for our pure python method
 for _ in range(100):
-    entropy.compute_entropy_rust_from_python(DATA)
+    entropy.compute_entropy_pure_python(DATA)
