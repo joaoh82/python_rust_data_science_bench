@@ -74,7 +74,7 @@ def test_pure_python(benchmark):
     benchmark(compute_entropy_pure_python, VAL)
 
 def test_pure_numpy_numba(benchmark):
-    """Test pure Python."""
+    """Test implementation using Numba."""
     benchmark(compute_entropy_numpy_numba, VAL)
 
 def test_python_scipy_numpy(benchmark):
@@ -82,11 +82,11 @@ def test_python_scipy_numpy(benchmark):
     benchmark(compute_entropy_scipy_numpy, VAL)
 
 def test_python_numpy(benchmark):
-    """Test pure Python with SciPy."""
+    """Test pure Python with just Numpy."""
     benchmark(compute_entropy_numpy, VAL)
 
 def test_python_numpy_numexpr(benchmark):
-    """Test pure Python with SciPy."""
+    """Test pure Python with Numpy and NumExpr."""
     benchmark(compute_entropy_numpy_numexpr, VAL)
 
 def test_rust(benchmark):
