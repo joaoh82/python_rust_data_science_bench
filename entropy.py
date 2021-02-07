@@ -23,7 +23,7 @@ def compute_entropy_pure_python(data):
 
 @numba.njit
 def compute_entropy_numpy_numba(data):
-    """Compute entropy on bytearray `data`."""
+    """Compute entropy on bytearray `data`. using Numba"""
     counts = np.zeros(256, dtype=np.uint64)
     entropy = 0.0
     length = len(data)
@@ -45,14 +45,14 @@ def compute_entropy_scipy_numpy(data):
 
 
 def compute_entropy_numpy(data):
-    """Compute entropy on bytearray `data` with SciPy and NumPy."""
+    """Compute entropy on bytearray `data` with just NumPy."""
     counts = np.bincount(bytearray(data), minlength=256)
     prob = counts[counts != 0].astype(float) / len(data)
     entropy = -np.sum(prob * np.log2(prob))
     return entropy
 
 def compute_entropy_numpy_numexpr(data):
-    """Compute entropy on bytearray `data` with SciPy and NumPy."""
+    """Compute entropy on bytearray `data` with NumPy and NumExpr."""
     counts = np.bincount(bytearray(data), minlength=256)
     prob = counts[counts != 0].astype(float) / len(data)
     log2 = np.log(2)
