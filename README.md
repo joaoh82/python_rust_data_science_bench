@@ -2,6 +2,8 @@ Rust and Python - Data Science Benchmark
 ===
 Testing the performance of Rust and Python on a simple data science task.
 
+Blog Post: [Rust vs Python on Data Science, but why not both?](https://medium.com/the-polyglot-programmer/rust-vs-python-on-data-science-but-why-not-both-d5f98080f632)
+
 Tools and Requirements:
 * https://github.com/dgrunwald/rust-cpython
 * https://github.com/PyO3/setuptools-rust
