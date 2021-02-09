@@ -25,6 +25,7 @@ $ pip install
 ```
 
 Results:
+Tests ran on a macOS Catalina - 2.4 GHz 8-Core Intel Core i9 - 32 GB 2667 MHz DDR4
 
 ```
 # Python invoking pure Rust
